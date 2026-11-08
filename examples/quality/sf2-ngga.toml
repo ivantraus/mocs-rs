@@ -1,0 +1,22 @@
+seed = 0
+population = 100
+offspring = 100
+generations = 100000
+max_evaluations = 20000
+threads = 1
+
+[algorithm]
+kind = "ngga"
+
+[problem]
+kind = "sf2"
+
+[operators]
+mating = "tournament"
+crossover = "simulated_binary"
+mutation = "polynomial"
+crossover_probability = 0.8
+mutation_probability = 1.0
+per_locus_probability = 1.0
+sbx_eta = 15.0
+mutation_eta = 15.0

@@ -1,0 +1,6 @@
+@relation binary
+@attribute x {0,1}
+@attribute class {0,1}
+@data
+0,0
+1,1

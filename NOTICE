@@ -1,0 +1,10 @@
+MOCS-RS — Multi-Objective Classifier System
+Copyright 2003, 2026 Ivan Traus
+
+Rust port of MOCS:
+https://github.com/ivantraus/mocs
+Historical source revision: e4bae37a2e8e895c143ee24fe3fa8961cb25ea08
+
+The copyright owner authorized distribution of this port under Apache-2.0.
+The historical C++ repository and its existing GPL-3.0-or-later grants are unchanged.
+Dependencies and external datasets retain their own terms. See docs/PROVENANCE.md.

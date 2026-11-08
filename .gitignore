@@ -1,0 +1,8 @@
+/target/
+/results/
+*.profraw
+.DS_Store
+__pycache__/
+*.pyc
+/quality-results/
+/runs.jsonl

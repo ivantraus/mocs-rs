@@ -1,0 +1,27 @@
+{
+  "protocol": "regression-linear-protocol-v2",
+  "methods": ["regression_rule", "regression_linear_rule"],
+  "models": {
+    "predictors": "exactly one numeric or integer predictor",
+    "target": "numeric or integer",
+    "bounds": {"intercept": [-1, 2], "slope": [-4, 4]},
+    "initialization": "independent uniform; no least-squares warm start",
+    "selection": "training-only final selection",
+    "evaluation": "serial engine per fit; bounded worker processes across fits"
+  },
+  "cases": {
+    "sparse": {"train": "regression-train.arff", "test": "regression-test.arff", "seed_range_inclusive": [0, 29], "evaluations": 100000},
+    "dense": {"train": "regression-dense-train.arff", "test": "regression-dense-test.arff", "seed_range_inclusive": [0, 29], "evaluations": 100000},
+    "quadratic": {"train": "regression-quadratic-train.arff", "test": "regression-quadratic-test.arff", "seed_range_inclusive": [0, 9], "evaluations": 10000},
+    "vshape": {"train": "regression-absolute-train.arff", "test": "regression-absolute-test.arff", "seed_range_inclusive": [0, 9], "evaluations": 10000}
+  },
+  "controls": ["training_target_mean", "centered_ols_on_training_rows"],
+  "primary_metric": "heldout_mse",
+  "reported_metrics": ["training_mse", "heldout_mse", "selected_rule_count", "evaluations", "budget_overshoot", "fallbacks", "abstentions", "paired_differences"],
+  "interpretation": [
+    "The sparse and dense median MSE targets are 0.125 and 0.1666 for the new variant; they do not change the original release gate.",
+    "Quadratic and V-shaped cases are descriptive controls without acceptance thresholds.",
+    "Seed labels pair summaries but differing genome layouts do not provide common random numbers.",
+    "Held-out outcomes must not tune protocol settings."
+  ]
+}

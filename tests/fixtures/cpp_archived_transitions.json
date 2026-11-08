@@ -1,0 +1,11 @@
+{
+  "provenance": "Subset of the captured C++ driver output in tests/fixtures/legacy_transition_expected.json",
+  "front_dedup_then_best_duplicate": {
+    "fitness": [[0.1, 0.2], [0.2, 0.3], [0.3, 0.4], [0.1, 0.8], [0.2, 0.6], [0.1, 0.8]],
+    "values": [0, 1, 2, 0, 0, 0]
+  },
+  "best_equals_old_size_skips_front_block": {
+    "fitness": [[0.1, 0.2], [0.2, 0.3], [0.3, 0.2], [0.1, 0.4], [0.2, 0.3]],
+    "values": [0, 1, 0, 0, 0]
+  }
+}

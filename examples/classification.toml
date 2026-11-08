@@ -1,0 +1,16 @@
+seed = 0
+population = 100
+offspring = 100
+generations = 100
+
+[algorithm]
+kind = "nsga2"
+
+[training]
+model = "rule"
+fitness = "loss_size"
+decision = "best_accuracy"
+initial_rules = 15
+prune_probability = 0.0
+initial_generality = 0.75
+wildcard_probability = 0.5

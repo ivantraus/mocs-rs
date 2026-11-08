@@ -1,0 +1,24 @@
+seed = 0
+population = 100
+offspring = 100
+generations = 50
+threads = 1
+
+[algorithm]
+kind = "nsga2"
+
+[problem]
+kind = "sf2"
+
+[training]
+model = "rule"
+fitness = "loss_size"
+decision = "best_accuracy"
+initial_rules = 10
+
+[operators]
+mating = "tournament"
+crossover = "variable_length"
+mutation = "uniform"
+crossover_probability = 0.8
+mutation_probability = 1.0

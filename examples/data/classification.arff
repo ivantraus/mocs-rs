@@ -1,0 +1,13 @@
+@relation synthetic_classification
+@attribute measurement numeric
+@attribute material {smooth,rough}
+@attribute class {low,high}
+@data
+0.2,smooth,low
+0.4,smooth,low
+0.6,rough,low
+0.8,smooth,low
+4.2,rough,high
+4.4,rough,high
+4.6,smooth,high
+4.8,rough,high

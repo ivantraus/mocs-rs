@@ -1,0 +1,31 @@
+seed = 0
+population = 285
+offspring = 285
+generations = 1000
+threads = 1
+
+[algorithm]
+kind = "moga"
+sharing = 0.1
+elitism = false
+best = 86
+tournament_size = 2
+
+[training]
+model = "rule"
+fitness = "archived_loss_size"
+decision = "best_accuracy"
+initial_rules = 25
+prune_probability = 0.0
+initial_generality = 0.75
+wildcard_probability = 0.5
+
+[operators]
+mating = "random"
+crossover = "variable_length"
+mutation = "uniform"
+crossover_probability = 0.4
+mutation_probability = 0.02
+per_locus_probability = 0.25
+crossover_points = 2
+crossover_alignment = 1

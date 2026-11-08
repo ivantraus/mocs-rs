@@ -1,0 +1,31 @@
+seed = 13
+population = 100
+offspring = 100
+generations = 5
+threads = 1
+
+[algorithm]
+kind = "nsga2"
+elitism = true
+
+[problem]
+kind = "okk"
+
+[operators]
+crossover = "k_point"
+crossover_alignment = 1
+crossover_points = 1
+crossover_probability = 0.8
+fitness_tournament = true
+mating = "random"
+mating_tournament_size = 4
+mating_winners = 2
+mutation = "uniform"
+mutation_eta = 20.0
+mutation_probability = 1.0
+neighbours = 10
+normal_epsilon = 1e-10
+per_locus_probability = 0.1428571428
+adaptive_epsilon = 1e-10
+sbx_eta = 15.0
+sbx_shared_beta = false

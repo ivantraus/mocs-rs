@@ -1,0 +1,10 @@
+@relation "mixed, fixture"
+@attribute 'wide feature' numeric
+@attribute narrow numeric
+@attribute 'shade name' {'light blue', dark, '?'}
+@attribute code integer [1, 12]
+@attribute class {'class, one', two}
+@data
+0,0,'light blue',1,'class, one'
+1000,1,dark,12,two
+500,?, ?,7,'class, one'

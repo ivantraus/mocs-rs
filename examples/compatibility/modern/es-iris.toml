@@ -1,0 +1,32 @@
+seed = 0
+population = 50
+offspring = 250
+generations = 250
+threads = 1
+
+[algorithm]
+kind = "moes"
+sharing = 0.1
+elitism = true
+best = 0
+tournament_size = 2
+
+[training]
+model = "rule"
+fitness = "archived_loss_size"
+decision = "compromise"
+initial_rules = 25
+prune_probability = 0.0
+initial_generality = 0.75
+wildcard_probability = 0.5
+
+[operators]
+mating = "random"
+crossover = "variable_length"
+mutation = "normal"
+crossover_probability = 1.0
+mutation_probability = 1.0
+per_locus_probability = 1.0
+crossover_points = 2
+crossover_alignment = 1
+normal_epsilon = 0.01

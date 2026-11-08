@@ -1,0 +1,8 @@
+@relation synthetic_unlabeled
+@attribute measurement numeric
+@attribute material {smooth,rough}
+@data
+0.3,smooth
+0.7,rough
+4.3,rough
+4.7,smooth

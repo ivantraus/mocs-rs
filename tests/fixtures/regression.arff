@@ -1,0 +1,6 @@
+@relation regression
+@attribute x numeric
+@attribute y numeric
+@data
+0,0
+10,10

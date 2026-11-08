@@ -1,0 +1,209 @@
+{
+  "fixture": "C++ MOGA transition oracle outputs",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "compiler": "g++-16 (Homebrew GCC 16.2.0)",
+  "hashes": {
+    "driver_source_sha256": "61048f9df75127686a246cafaf56f9c1755ac8b797995ca76d414c7aa4272098",
+    "driver_binary_sha256": "25a1afd27ecc45e60aa2320e44e7a5caeb7abd907847b9c13374665cfa8ba694",
+    "legacy_libmocs_sha256": "63bc4d810afdbf33b3019f8bbb0592f54c432fb6c8214effb2f88c44f2f30f50"
+  },
+  "cases": [
+    {
+      "rank_unique": {
+        "population": [
+          {
+            "tag": 0,
+            "fitness": [
+              0.1,
+              0.2
+            ],
+            "value": 0
+          },
+          {
+            "tag": 1,
+            "fitness": [
+              0.2,
+              0.3
+            ],
+            "value": 1
+          },
+          {
+            "tag": 2,
+            "fitness": [
+              0.3,
+              0.4
+            ],
+            "value": 2
+          }
+        ]
+      }
+    },
+    {
+      "front_dedup_then_best_duplicate": {
+        "result": [
+          {
+            "tag": 20,
+            "fitness": [
+              0.1,
+              0.2
+            ],
+            "value": 0
+          },
+          {
+            "tag": 21,
+            "fitness": [
+              0.2,
+              0.3
+            ],
+            "value": 1
+          },
+          {
+            "tag": 22,
+            "fitness": [
+              0.3,
+              0.4
+            ],
+            "value": 2
+          },
+          {
+            "tag": 10,
+            "fitness": [
+              0.1,
+              0.8
+            ],
+            "value": 0
+          },
+          {
+            "tag": 11,
+            "fitness": [
+              0.2,
+              0.6
+            ],
+            "value": 0
+          },
+          {
+            "tag": 10,
+            "fitness": [
+              0.1,
+              0.8
+            ],
+            "value": 0
+          }
+        ],
+        "old_after_best_sort": [
+          {
+            "tag": 10,
+            "fitness": [
+              0.1,
+              0.8
+            ],
+            "value": 1e+300
+          },
+          {
+            "tag": 11,
+            "fitness": [
+              0.2,
+              0.6
+            ],
+            "value": 1e+300
+          },
+          {
+            "tag": 12,
+            "fitness": [
+              0.2,
+              0.6
+            ],
+            "value": 1e+300
+          },
+          {
+            "tag": 13,
+            "fitness": [
+              0.4,
+              0.9
+            ],
+            "value": 1e+300
+          }
+        ]
+      }
+    },
+    {
+      "best_equals_old_size_skips_front_block": {
+        "result": [
+          {
+            "tag": 30,
+            "fitness": [
+              0.1,
+              0.2
+            ],
+            "value": 0
+          },
+          {
+            "tag": 31,
+            "fitness": [
+              0.2,
+              0.3
+            ],
+            "value": 1
+          },
+          {
+            "tag": 40,
+            "fitness": [
+              0.3,
+              0.2
+            ],
+            "value": 0
+          },
+          {
+            "tag": 41,
+            "fitness": [
+              0.1,
+              0.4
+            ],
+            "value": 0
+          },
+          {
+            "tag": 42,
+            "fitness": [
+              0.2,
+              0.3
+            ],
+            "value": 0
+          }
+        ],
+        "old_order_unchanged": [
+          {
+            "tag": 40,
+            "fitness": [
+              0.3,
+              0.2
+            ],
+            "value": 1e+300
+          },
+          {
+            "tag": 41,
+            "fitness": [
+              0.1,
+              0.4
+            ],
+            "value": 1e+300
+          },
+          {
+            "tag": 42,
+            "fitness": [
+              0.2,
+              0.3
+            ],
+            "value": 1e+300
+          }
+        ]
+      }
+    }
+  ],
+  "regeneration": {
+    "working_directory": "repository root",
+    "prerequisites": "Build the upstream MOCS shared library; set MOCS_CPP_SOURCE to its source/build directory and CXX to a compatible C++ compiler.",
+    "compile_command": "\"${CXX:-c++}\" -std=gnu++98 -I\"$MOCS_CPP_SOURCE\" tests/fixtures/legacy_transition_driver.cc -L\"$MOCS_CPP_SOURCE\" -lmocs -Wl,-rpath,\"$MOCS_CPP_SOURCE\" -o results/legacy-transition-driver",
+    "run_command": "./results/legacy-transition-driver",
+    "note": "Create results/ first. Driver stdout contains one JSON object per case. The recorded platform, compiler, hashes, and expected values describe the original capture; regenerated binary hashes may differ."
+  }
+}
